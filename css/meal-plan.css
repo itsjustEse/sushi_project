@@ -1,0 +1,255 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  behavior: scroll;
+}
+
+header {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  box-shadow: var(--box-shadow);
+  z-index: 10;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  list-style: none;
+}
+
+.menu li {
+  display: flex;
+  padding: 14px 16px;
+  align-items: center;
+  gap: 6px;
+  position: relative;
+}
+
+.bi-chevron-down {
+  transition: all 300ms ease;
+}
+
+.menu li:hover .dropdown-menu {
+  display: block;
+}
+.menu li .dropdown-menu {
+  position: absolute;
+  width: 350px;
+  top: 45px;
+  left: 0;
+  display: none;
+  background-color: var(--color-3);
+  border-radius: 20px;
+}
+
+.slide-up {
+  animation-name: dropdown;
+  animation-duration: 300ms;
+  animation-timing-function: ease;
+}
+
+@keyframes dropdown {
+  0% {
+    transform: translateY(20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.menu li a {
+  text-decoration: none;
+}
+
+.menu-icons,
+.contacts {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.section-1 {
+  width: 100%;
+  padding: 70px 0;
+}
+
+.home-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 70px 0;
+}
+
+.about {
+  width: 40%;
+}
+
+h1,
+.note {
+  padding-bottom: 30px;
+}
+
+.sushi {
+  width: 40%;
+
+  /* height: 500px; */
+}
+
+.rating {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.meal-rating,
+.meal-2 {
+  width: 200px;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+.sushi-pic {
+  width: 100%;
+}
+
+.popular-data {
+  text-align: center;
+  font-family: var(--font-1);
+  padding-bottom: 50px;
+}
+
+.section-title-alt {
+  letter-spacing: 2px;
+  word-spacing: 2px;
+  color: var(--color-6);
+}
+
+.section-title {
+  margin-bottom: var(--mb-1);
+}
+
+.popular-content {
+  margin-top: -2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 20px;
+  gap: 20px;
+  padding-bottom: 100px;
+}
+
+.popular-title {
+  font-size: var(--text-xm);
+}
+
+.popular-subtitle {
+  font-size: var(--text-xs);
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  gap: 20px;
+  border-radius: 24px;
+  box-shadow: var(--box-shadow);
+  padding: 20px;
+  width: 200px;
+  background-color: var(--color-3);
+}
+
+.main-dish:hover,
+.breakfast:hover,
+.sushi-combo:hover,
+.browse-all:hover {
+  box-shadow: var(--box-shadow-1);
+}
+
+.popular-blob {
+  background-color: #6ce278;
+  padding: 5px;
+  border-radius: 100px;
+}
+
+.popular-text {
+  font-family: var(--font-1);
+}
+
+.m1 {
+  width: 50px;
+}
+
+.tab-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+}
+
+.best-dish-wrapper {
+  width: 250px;
+  padding: 20px;
+  box-shadow: var(--box-shadow);
+  border-radius: 30px;
+  position: relative;
+}
+
+.bdw {
+  width: 90%;
+}
+
+.best-dish-wrapper .bi-bag {
+  color: white;
+  background-color: var(--color-1);
+  padding: 15px;
+  border-top-right-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+  position: absolute;
+  top: -1px;
+  right: -1px;
+}
+
+.dish_title {
+  font-size: 1.2rem;
+  color: var(--color-2);
+  font-family: var(--font-1);
+}
+
+.dish_item_text {
+  color: var(--color-4);
+  font-family: var(--font-1);
+  font-size: 0.94rem;
+}
+
+.dish_text {
+  margin-bottom: 1rem;
+}
+
+.dish_data {
+  display: flex;
+  flex-direction: row;
+  column-gap: 9rem;
+}
+
+.dish-price,
+.dish-rating {
+  font-size: 0.815rem;
+}
